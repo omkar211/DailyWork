@@ -1,0 +1,71 @@
+Question : Maximum Absolute Difference
+         Problem Description:
+         You are given an array of N integers, A1, A2, .... AN.
+         Return the maximum value of f(i, j) for all 1 ≤ i, j ≤ N. 
+         f(i, j) is defined as |A[i] - A[j]| + |i - j|, where |x| denotes absolute value of x.
+
+Solution: 
+        lets open this equation |A[i] - A[j]| + |i - j|
+
+         A[i]-A[j]+i-j   if                    equation-----1
+                          A[i]>=A[j] and i>=j  
+        
+         A[i]-A[j]-i+j   if                    equation-----2
+                          A[i]>=A[j] and j>=i
+        
+         A[j]-A[i]+i-j   if                    equation-----3
+                          A[j]>=A[i] and i>=j
+        
+         A[j]-A[i]+j-i   if                    equation-----4
+                          A[j]>=A[i] and j>=i
+        lets rearrange the above 4 equations in terms of i together and j together
+        
+        (A[i]+i)-(A[j]+j) equation--------1
+        (A[i]-i)-(A[j]-j) equation--------2
+        (A[j]-j)-(A[i]-i) equation--------3
+        (A[j]+j)-(A[i]+i) equation--------4
+
+        so here i and j are not define . it can be any index.
+        so equation----1 and equation----4  are same and equation----3 and equation----4 are same .
+        so final equations are 
+        (A[i]+i)-(A[j]+j)
+        (A[i]-i)-(A[j]-j)
+        To find maximum output last part has to be minimum
+        in order to find the solution we can observe here if we add a ith index in arr[i].
+        then we have to only check min and max value in it .
+        same for second equation.
+        Code :
+              def find_function(A):
+                n=len(A)
+                if n<=1:
+                return "array size should be greater than 1"
+                list_for_positive_add_up = []
+                list_for_negative_add_up = []
+
+                min1=float('inf')
+                max1=float('-inf')
+                min2=float('inf')
+                max2=float('-inf')
+                for i in range(n):
+                    list_for_positive_add_up.append(A[i]+i)
+                    
+                for i in range(n):
+                    list_for_negative_add_up.append(A[i]-i)
+
+                for i in range(n):
+                    min1=min(min1,list_for_positive_add_up[i])
+                    max1=max(max1,list_for_positive_add_up[i])
+                for i in range(n):
+                    min2=min(min1,list_for_negative_add_up[i])
+                    max2=max(max2,list_for_negative_add_up[i])
+                return max(max1-min1,max2-min2)
+        Time Compexity : O(n)
+        Space Complexity : O(n)
+
+
+                
+ 
+
+        
+
+          
