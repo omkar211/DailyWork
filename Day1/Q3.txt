@@ -1,0 +1,52 @@
+There are N (N > 0) beggars sitting in a row outside a temple. Each beggar initially has an empty pot. When the devotees come to the temple, they donate some amount of coins to these beggars. Each devotee gives a fixed amount of coin(according to his faith and ability) to some K beggars sitting next to each other.
+
+Given the amount donated by each devotee to the beggars ranging from i to j index, where 1 <= i <= j <= N, find out the final amount of money in each beggar's pot at the end of the day, provided they don't fill their pots by any other means.
+
+Example:
+
+Input:
+N = 5, D = [[1, 2, 10], [2, 3, 20], [2, 5, 25]]
+
+Return: [10, 55, 45, 25, 25]
+
+Explanation:
+=> First devotee donated 10 coins to beggars ranging from 1 to 2. Final amount in each beggars pot after first devotee: [10, 10, 0, 0, 0]
+
+=> Second devotee donated 20 coins to beggars ranging from 2 to 3. Final amount in each beggars pot after second devotee: [10, 30, 20, 0, 0]
+=> Third devotee donated 25 coins to beggars ranging from 2 to 5. Final amount in each beggars pot after third devotee: [10, 55, 45, 25, 25]
+
+
+solution 1:- so here is N is Number of beggers and D is donation information for beggers.
+            so first take the array of size N and assign default value to zero.
+            and ask every Donator From D to donate the money and run a loop from index i to index j
+            i) Code :-
+                def find_money_begger(N,D):
+                    res=[0]*(N-1)
+                    for i in range(len):
+                        for j in range(D[i][0]-1,D[i][1],1):
+                            res[j]+=D[i][2]
+                    return res
+            Time Compexity : O(n2)
+            Space Complexity : O(n)
+
+solution2 : we can use the given information for every donar donates the money in their given index
+            so lets say donar start donate money from index "i" till index "j" such "x" amount 
+            if i add amount at index "i" and set flag that we have to donate till jth index .
+            after that i have to remove "x" amount from j+1 to nth index. so here i will add up "-x" amount
+            at "j+1" index.
+            after the all donation completion. i have to just calculate the prefix sum of array that will be my answer.
+            i) Code is here:-
+                        def find_money_begger(N,D):
+                            #create a list of size N to store the money for beggers
+                            res=[0]*(N-1)
+                            for i in range(len(D)):
+                                res[D[i][0]-1]+=D[i][2]
+                                res[D[j][1]]+=-1*D[i][2]
+                            for i in range(1,N):
+                                res[i]+=res[i-1]
+                            return res
+
+
+
+
+
