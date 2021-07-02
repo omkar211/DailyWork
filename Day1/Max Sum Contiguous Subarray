@@ -49,4 +49,24 @@ Solution1:
         Time complexity:O(N2) where N is number of elements in array
         Space complexity :O(1)
 
-Solution2: 
+Solution2: let say we have given an array below: 
+          [x1,x2,x3,x4,x5,.....xn]
+          if we chose a ith index's element, here we will only include it when the prefix sum up to 
+          the index will be greater than Zero .
+          if sum till ith index is <= 0 then we have to assign prefix sum till ith position is zero.
+        
+          Code:
+              def max_sum_contiguous(A):
+                n=len(A)
+                if n<0:
+                return "list is empty"
+                sum=0
+                res=A[0]
+                for i in range(n):
+                    sum+=A[i]
+                    res=max(res,sum)
+                    sum=min(sum,0)
+                return res
+        Time Complexity : O(N) where N is the Number of elements in the array.
+        Space Complexity : O(1)
+        
