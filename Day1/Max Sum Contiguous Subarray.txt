@@ -1,0 +1,52 @@
+Question:  Max Sum Contiguous Subarray
+       
+       Problem Description
+
+Find the contiguous subarray within an array, A of length N which has the largest sum.
+Problem Constraints
+1 <= N <= 1e6
+-1000 <= A[i] <= 1000
+
+Input Format
+The first and the only argument contains an integer array, A.
+Output Format
+Return an integer representing the maximum possible sum of the contiguous subarray.
+
+Example Input
+Input 1:
+
+ A = [1, 2, 3, 4, -10] 
+Input 2:
+
+ A = [-2, 1, -3, 4, -1, 2, 1, -5, 4] 
+
+Example Output
+Output 1:
+ 10 
+Output 2:
+ 6 
+Example Explanation
+Explanation 1:
+ The subarray [1, 2, 3, 4] has the maximum possible sum of 10. 
+
+Explanation 2:
+The subarray [4,-1,2,1] has the maximum possible sum of 6. 
+
+Solution1:
+         lets say here a list of elemnets is Given  [x1,x2,x3,x4,x5,x6,...xn]
+         i will go at every index to include it in sum and exclude from the sum till last element.
+         and maintain sametime a global variable to store the result.
+         
+         Code:
+             def max_sum_contiguous(A):
+                res=0
+                for i in range(len(A)):
+                    sum=0
+                    for j in range(i,len(A)):
+                        sum+=A[i]
+                        res=max(res,sum)
+
+        Time complexity:O(N2) where N is number of elements in array
+        Space complexity :O(1)
+
+Solution2: 
