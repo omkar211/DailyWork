@@ -1,4 +1,4 @@
-Question:  <b>Max</b> Sum Contiguous Subarray
+Question:  Max Sum Contiguous Subarray
        
        Problem Description
 
