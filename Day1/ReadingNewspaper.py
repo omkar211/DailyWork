@@ -45,7 +45,7 @@ def reading_newspaper(A,B):
 
 print(reading_newspaper(100,[80, 20, 20, 15,0,0,0]))
 
-#Time Complexity : 
+#Time Complexity : O(A/sum(B))
 #Space Complexity : O(1)
 
 """ 
