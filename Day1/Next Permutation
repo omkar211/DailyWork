@@ -1,0 +1,59 @@
+Question : Next Permutation
+              Problem Description
+
+Implement the next permutation, which rearranges numbers into the numerically next greater permutation of numbers for a given array A of size N.
+If such arrangement is not possible, it must be rearranged as the lowest possible order i.e., sorted in an ascending order.
+NOTE:
+The replacement must be in-place, do not allocate extra memory.
+DO NOT USE LIBRARY FUNCTION FOR NEXT PERMUTATION. Use of Library functions will disqualify your submission retroactively and will give you penalty points.
+
+Problem Constraints
+1 <= N <= 5 * 105
+1 <= A[i] <= 109
+
+Input Format
+The first and the only argument of input has an array of integers, A.
+
+Output Format
+Return an array of integers, representing the next permutation of the given array.
+
+Example Input
+Input 1:
+
+ A = [1, 2, 3]
+Input 2:
+
+ A = [3, 2, 1]
+
+Example Output
+Output 1:
+
+ [1, 3, 2]
+Output 2:
+
+ [1, 2, 3]
+
+Example Explanation
+Explanation 1:
+
+ Next permutaion of [1, 2, 3] will be [1, 3, 2].
+Explanation 2:
+
+ No arrangement is possible such that the number are arranged into the numerically next greater permutation of numbers.
+ So will rearranges it in the lowest possible order.
+
+ Solution 1:
+            1.sort the array and find all the permutation rank wise store in a list and check the just greater permutation.that will be our answer.
+            Code: 
+                
+                def Next_permutation(arr):
+                    arr.sort()
+                    def helper():
+                        
+                    
+
+Solution 2: 
+            1. As we have observed from above examples. We are always finding point after      thatpoint rest of the array is in decreasing order .
+            2. After finding that point we know that the permutation is always greater than given number  so just need to find only greater element at that point.
+            3. swap the just greater element to the pointed element. and sort the point+1 to N remained array.
+            4.that will be our answer.
