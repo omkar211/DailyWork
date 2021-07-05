@@ -49,7 +49,7 @@ Solution 2:
           else insert in the dict X element.
 """
 # Code 
-def pairSum(arr,B):
+def pairSum2(arr,B):
     d={}
     for i in range(len(arr)):
         if arr[i] in d:
