@@ -83,7 +83,7 @@ def binarysearch(arr,key):
 
 def findNumber2(arr,key):
     row=-1
-    for i in range(len(Analystarr)):
+    for i in range(len(arr)):
         if arr[i][0]<=key and arr[i][len(arr[0])-1]>=key:
             row=i
     if row>=0:
