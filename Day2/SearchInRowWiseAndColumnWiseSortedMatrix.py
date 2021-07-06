@@ -40,57 +40,19 @@ A[1][2]= 2
 """
 1.It can contains duplicate Numbers?
 2.It has negative numbers?
-3.What should i return when size or matrix is zero
+3.What should i return when size or matrix is zero?
 """
 #Solution 1:
 """ 
 Traverse on each and every cell and if it if the key is present then return 1 if not return -1.
 """
 #Code:
-def findNUmber(arr,key):
+def findNumber(arr,key):
+    res=0
     for i in range(len(arr)):
         for j in range(len(arr[0])):
             if arr[i][j]==key:
-                return True
-
-    return False
+                res=min(res,(i * 1009 + j))
+    return -1
 #Time Complexity:O(N*M)
 #Space Complexity:O(1)
-
-
-#Solution 2:
-"""
-we have given all the columns and all the rows are sorted in ascending order.
-by using this information we can solve it.
-so we know that every element in the first column and in last column has value greater than key and smaller or may be equal to the key.
-so we find out that cell and using binary search algorithm we can find the value .because every sell is sorted.
-arr[0][col 0 to m-1]>=key and arr[n-1][col 0 to m-1]
-
-"""
-# Code
-def binarysearch(arr,key):
-    low = 0
-    high = len(arr)-1
-    while(low<=high):
-        mid=low+(high-low)//2
-        if arr[mid]==key:
-            return mid
-        elif arr[mid]<key:
-            low=mid+1
-        else:
-            high=mid-1
-    return -1
-
-def findNumber2(arr,key):
-    row=-1
-    for i in range(len(arr)):
-        if arr[i][0]<=key and arr[i][len(arr[0])-1]>=key:
-            row=i
-    if row>=0:
-        col = binarysearch(arr[i],key)
-        if col==-1:
-            return col
-        return (row * 1009 + col)
-print(findNumber2([[1,2,3,4,5],[6,7,8,9,10]],6))
-#Time Complexity: O(nlogm) where n is number of rows and m is number of col.
-#Space Comlexity: O(1)
