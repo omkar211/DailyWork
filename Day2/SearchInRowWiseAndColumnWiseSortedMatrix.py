@@ -48,7 +48,7 @@ Traverse on each and every cell and if it if the key is present then return 1 if
 """
 #Code:
 def findNumber(arr,key):
-    res=0
+    res=float("inf")
     for i in range(len(arr)):
         for j in range(len(arr[0])):
             if arr[i][j]==key:
