@@ -28,4 +28,22 @@ Output 2:
 
 """
 # Solution 1:
+"""
+1.Create an array of same size of A and pre-initialize  it with Zero all the index let's array called 'arr'.
+2.Traverse the array A from zero till N.
+3.Assign the value in arr (arr[A[index]]=index).
+4.Return arr
+"""
+#Code 
+def rearrange(A):
+    arr=[0]*len(A)
+    for i in range(len(A)):
+        arr[A[i]]=i
+    return arr
 
+print(rearrange([1, 2, 3, 4, 0]))
+
+#Solution 2:
+"""
+.
+"""
