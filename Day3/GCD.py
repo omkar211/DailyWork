@@ -36,8 +36,42 @@ Explanation 1:
 Explanation 2:
 1 divides both 6 and 7
  """
+#Solution 1: 
+"""
+we will check all the possible values start from min(a,b) to reach 1.whenever we get a value which divides 
+both A and B will be our answer.
+"""
+#Code
+def gcd1(A,B):
+    val = min(A,B)
+    for i in range(val,-1,-1):
+        if A%i==0 and B%i==0:
+            return i
+#Time Complexity:O(min(A,B))
+#Space Complexity:O(1)
 
-#Solution:
+#Solution 2:
+"""
+here is given two numbers a,b which has gcd = g,
+if a>b,a=b+c,  c means some constant
+it means a/g,b/g means a and b both are divisible by g
+so replace the value of 'a' by 'b+c' and above given b/g so here c also divisible by g
+in order to find greatest common divisior we can replace a by c where c =a-b
+"""
+#Code
+def gcd2(a,b):
+    if a<b:
+        a,b=b,a
+    if a==0:
+        return b
+    if b==0:
+        return a
+    return gcd2(a-b,b)
+#Time Complexity :O(max(a,b))
+#Space Complexity :O(max(a,b))
+
+
+#Solution 3:
 """
 1.first we find the factors of a number and store it in a list 
   and we also find the factors of second number also and will store it in list.
@@ -70,17 +104,31 @@ def gcd(A,B):
         else:
             i+=1
     return res
-#Time Complexity = O(N)
-#Space Complexity = O(N)
+#Time Complexity = O(max(a,b))
+#Space Complexity = O(max(a,b))
 
 
-#Solution 2: Using Recursive Appraoch
+#Solution 2: Using Recursive and efficient Appraoch(Euclid's algotithm)
+"""
+#proof:
+lets say A>B and gcd(A,B)=1  
+so we write A=k*B+C
+k is factor and C is an contant.
+
+if A/g and B/g means both is divisible by g.
+in above B is divisible by g and C also must divisible by g. 
+if i divide A/B then it returns me C so C is a remainder.
+in above equation we can consider C as a remainder .
+so gcd(C,B)=gcd(A,B)
+
+"""
+#Code
 def gcd2(A,B):
     if(B==0):
         return A
     return gcd2(B,A%B)
-#Time Complexity:O(N)
-#Space Complexity : O(N) using stack 
+#Time Complexity :
+#Space Complexity : 
 
 
 
