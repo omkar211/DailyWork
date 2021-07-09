@@ -45,5 +45,19 @@ print(helper([2,2,4]))
 
 #Solution 2:
 """
-
+let say A=[a1,a2,a3,a4,a5,a6,a7,......,an]
+lets pick two elements from array a2,a5 whose gcd(a2,a5)=1
+so using commutive property  if we calculate the gcd of whole array with gcd(a2,a5) it will be always 1.
 """
+#Code 
+def helper2(arr):
+    if len(arr)<=1:
+        return "array has no 2 values"
+    res=arr[0]
+    for i in range(1,len(arr)):
+        res=gcd(res,arr[i])
+        if res==1:
+            return 1
+    return 0
+#Time Complexity : O(n*log(max))
+#Space Complexity : O(1)
