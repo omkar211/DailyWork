@@ -38,3 +38,22 @@ Explanation 2:
 
 Only 4 is a positive integer less than equal to 6 which is divisible by 1 and 4.
 """
+
+#Clarifications:
+"""
+1. what shoud i return when A<min(B,C)
+"""
+#Solution:
+"""
+Three Positive integers are given A,B,C.so we have to find numbers of count which is less than or equals to A and divisible by both B & C .
+"""
+#Code
+def divisiorGame(A,B,C):
+    count = 0
+    for i in range(max(B,C),A+1):
+        if i%B==0 and i%C==0:
+            count+=1
+    return count
+print(divisiorGame(6,1,4))
+
+
