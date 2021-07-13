@@ -30,3 +30,22 @@ For the second operation, smaller of P and Q is P.
 So we subtract P from Q which gives us the new values of P and Q as 5 and 5 resp.
 Since the values of P and Q are now same, we output the sum of these values=10.
 """
+
+#Solution:
+"""
+As given in question We have to substract smaller number from bigger number till both of then equal or one of them become zero.
+"""
+#Code 
+def repeatedSubstraction(A,B):
+        if A==B:
+            return A+A
+        if A==0:
+            return B
+        if B==0:
+            return A
+        if B>A:
+            A,B=B,A
+        return repeatedSubstraction(B,A-B)
+print(repeatedSubstraction(20,50))
+
+        
