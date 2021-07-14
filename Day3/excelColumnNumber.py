@@ -34,5 +34,16 @@ Explanation 1:
 """
 #Solution:
 """
-
+if we observe here so here we get a equation f(n)=26^i+ascii(char) where i start from 0 to n from right to left.
 """
+def excel(string):
+    res=0
+    index=1
+    for i in range(len(string)-1,-1,-1):
+        res+=index*(ord(string[i])-64)
+        index*=26
+    return res
+print(excel('ABCD'))
+
+#Time Complexity : O(N)
+#Space Complexity : O(1) 
