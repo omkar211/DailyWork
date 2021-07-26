@@ -16,14 +16,16 @@ we will end the loop and return n is not prime.
 #Code
 def prime(N):
     count=0
-    for i in range(1,N):
+    for i in range(1,N+1):
+        print(i)
         if N%i==0:
             count+=1
-        if count>2:
-            return "N is Not Prime"
+    
+    if count>2:
+        return "N is Not Prime"
     return "N is Prime"
 
-print(prime(37))
+# print(prime(4))
 #Time Complexity : O(N)
 #Space Complexity : O(1)
 
@@ -35,15 +37,19 @@ so here we can observe that second last factor always be <=N/2 and last factor w
 """
 #Code :
 def prime2(N):
-    count =0
+    count = 0
+    if N<=1:
+        return False
     for i in range(1,N//2+1):
         if N%i==0:
             count+=1
-        if count>2:
-            return "Not a Prime."
-    return "N is Prime."
+    count+=1
+    if count>2:
+        return False
+    
+    return True
 
-print(prime2(37))
+print(prime2(6))
 
 #Solution3:
 """
@@ -59,12 +65,15 @@ so f=sqrt(N).so we have tpo till f .
 import math
 def prime3(N):
     count=0
-
-    for i in range(1,int(math.sqrt(N))):
+    if N<=1:
+        return False
+    for i in range(1,int(math.sqrt(N))+1):
         if N%i==0:
             count+=1
-        if count>2:
-            return "N is Not Prime"
-    return "N is Prime"
+        if i!=N//i:
+            count+=1
+    if count>2:
+        return False
+    return True
 
-print(prime3(37))
+print(prime3(9))
