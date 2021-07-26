@@ -5,6 +5,7 @@ Question: N-door
      at a 1st step all the doors will toggle and opened 
      at a 2nd step every door from intially toggled if there are closed 
      turnout to be open or open one will be closed.
+     find the total number of gates open.
 """
 #Clarification:
 """
@@ -33,5 +34,18 @@ def ndoors(N):
                ans.append(i)
      return ans
 
-#Time Complexity : O(N2)
+#Time Complexity : O(NLogN)
 #Space Complexity : O(N)
+
+
+#Solution 2:
+"""
+If we observe from problem initially all the gates are closed. at first step all are opened, at second
+step every second element will be toggled.and so on....
+1.Those numbers who is toggled odd times will always be opened doors rest are closed.
+2. lets take a number X which will only divisible by all its factors. so count the factors. find out which number has odd numbers of factor will be are answer.
+"""
+
+#Code:
+def ndoors(n):
+     
