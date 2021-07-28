@@ -30,3 +30,19 @@ Explanation 2:
  A! = 720 
  Number of trailing zeros = 1. So, return 1.
 """
+
+#clarification :
+"""
+1.It contains negative numbers?
+"""
+#Solution1:
+"""
+simply , here We will calculate the factorial and count the trailling zeroes .
+"""
+#Time Complexity:O(N!)
+#Space Complexity:O(1)
+
+#Solution2:
+"""
+
+"""
