@@ -1,0 +1,19 @@
+if we added up with condition result will following like: 
+           
+A   B  AND    OR   XOR
+0   0   0     0    0
+0   1   0     1    1
+1   0   0     1    1
+1   1   1     1    0
+
+1.if We use << left shifter
+   M<<N ==> it means we added N number or ZEROS at the starting of M bits and REMOVE N bits from end.
+   M=M*2^N
+2.If we use >> right shifter
+  M>>N ==> it means we remove N bits from starting of M and added N bits in back.
+  means M/2^N  
+3. (N&N-1) unset the last bit.
+4. Xor property 
+   A^A=0
+   A^0=A
+   A^B=C=>A=B^C
