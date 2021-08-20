@@ -1,7 +1,7 @@
 """
 Problem Statement:         BINARY SEARCH
-When data is then exploit this order to dearch faster .
-eg : We have given an array and if we find out a pattern in order to search the the key .Reject the half of the array inorder to archieve aour goal . 
+When data is in order then exploit this order to search faster .
+eg : We have given an array and if we find out a pattern in order to search the the key .Reject the half of the array inorder to archieve our goal . 
 """
 #Code
 def binary_search(A,k):
@@ -18,7 +18,7 @@ def binary_search(A,k):
     return -1
 
 """
-So here we are rejecting the half or the array every time .
+So here we are rejecting the half of the current array every time .
 """
 #Time Complexity:O(logn)
 #Space Complexity:O(1)
