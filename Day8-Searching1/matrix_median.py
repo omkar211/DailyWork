@@ -36,3 +36,15 @@ Median is 5. So, we return 5.
 Explanation 2:
 Median is 17.
 """
+#Solution:
+"""
+1.We know that elements of total matrix is odd it means we do not need to cal culculate the median for even length elements
+2.it means median has same elements in left side and in right side also.
+3. So we pick an element one by one form a matrix and count the numbers of of elements less than picked element and greater numbers of elements right. 
+4. if both the the left== right it means it a median else pick another one element from matrix.
+5. and handle picked equals elements.
+"""
+1 1 1
+1 1 2
+1 2 2
+1 1 1 1 1 1 2 2 2
