@@ -1,5 +1,5 @@
 """
-Special Integer
+Exercise:Special Integer
 Problem Description
 Given an array of integers A and an integer B, find and return the maximum value K such that there is no subarray in A of size K with sum of elements greater than B.
 Problem Constraints
@@ -38,5 +38,12 @@ Constraints are satisfied for maximal value of 3.
 
 #Bruteforce Approach
 """
-
+We start check from 1 to N(array size) if lets say our testcase pass for single element then we check for subarray size 2 if it pass for it then we will check for 3 subarray.
 """
+#Code
+def special_integer(A,B):
+    total=0
+    for i in range(len(A)):
+        total+=A[i]
+        for j in range(i+1,len(A)):
+
