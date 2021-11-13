@@ -74,3 +74,31 @@ def cow_placed(A,B):
 #Space Complexity:O(N)
 
 #Optimized
+"""
+If we guess the min distance b/w two cows that will be in 0 and last element of the array.
+so we will every time guess the min distance and check if this min is valid or not .if valid then another min diatace can be at right side of it else go for left side of it .
+"""
+
+#Code
+
+def check(mid,A,B):
+    for i in range(len(A)-1):
+        if(A[i+1]-A[i]>=mid):
+            B-=1
+    if B<=0:
+        return True
+    return False
+def cow_placed2(A):
+    A.sort()
+    low=0
+    high=A[-1]
+    while low<high:
+        mid=(low+high)//2
+        if check(mid):
+            res=max(res,mid)
+            low=mid+1
+        else:
+            high=mid-1
+
+#Time Complexity:O(max(NlogMax,NLogN))
+#Space Complexity:O(N)
