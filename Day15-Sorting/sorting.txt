@@ -13,6 +13,7 @@ We will see these terms in this lecture
 4. No. of swaps
 5. Stability
 6.Inplace
+7.Invarient
 
 Q. What is Time Complexity?
 Ans. Time complexity = O(No.of swaps +No.of comparisions+Space Complexity).
