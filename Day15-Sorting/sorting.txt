@@ -1,0 +1,27 @@
+Q- What is sorting?
+Ans- Permutating a sequence to enforce the order.
+
+
+Q-What is absolute bruteforce of soring?
+ans- To calculate all permutations and check the order.
+     Timecomplexity:O(N!N)
+    
+We will see these terms in this lecture
+1. Time Complexity
+2. Space Complexity
+3. No. of Comparisions
+4. No. of swaps
+5. Stability
+6.Inplace
+
+Q. What is Time Complexity?
+Ans. Time complexity = O(No.of swaps +No.of comparisions+Space Complexity).
+
+So We will see why no.of comparisions and no of swaps are important for some usage.
+
+Q-What is stability?
+Ans: If two objects are equal according to some key that we are using for comparision then they must retain their original relative order .
+
+Q-Lets say we have given a ship with full of container with different height and we want to sort the containers on the ship.
+
+Ans: Inorder to archieve the solution we alway want a algorithm that will take minimum swaps and can take any numbers of comparisions.
