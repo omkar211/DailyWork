@@ -9,8 +9,6 @@ If i find out fib(n-1)+fib(n-2) then simply return that.and we know that fibonac
 """
 #Code
 def fib(N):
-    if N<0:
-        return 0
     if N==0 or N==1:
         return N
     return fib(n-1)+fib(n-2)
