@@ -1,0 +1,5 @@
+->Base condition
+->Iterate over possibilities
+          ->Make some changes
+                 ->Recursive call for remining
+          ->Undo changes
