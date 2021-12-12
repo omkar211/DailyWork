@@ -55,14 +55,10 @@ Answer is evident here.
 def helper(A,i,j,total_zeros,traversed_path,current_zeros):
     if i>=len(A) or i<0 or j>=len(A[0]) or j<0 or traversed_path[i][j]==1 or A[i][j]==-1:
         return 0
-    print(A[i][j])
-
     if A[i][j]==2:
-        if total_zeros==current_zeros:
-            print(1)
+        if total_zeros+1==current_zeros:
             return 1
         return 0
-    # print(traversed_path)
     traversed_path[i][j]=1
     down=helper(A,i+1,j,total_zeros,traversed_path,current_zeros+1)
     up=helper(A,i-1,j,total_zeros,traversed_path,current_zeros+1)
@@ -80,7 +76,9 @@ def unique_path(A):
     for i in range(len(A)):
         for j in range(len(A[0])):
             if A[i][j]==1:
-                traversed_path=[[0]*len(A[0])]*len(A)
+                traversed_path= [[0 for i in range(len(A[0]))] for j in range(len(A))]
                 return helper(A,i,j,total_zeros,traversed_path,0)
 
-print(unique_path([[1, 0, 0, 0],[0, 0, 0, 0],[0, 0, 2, -1]]))
+print(unique_path([   [0, 1],
+        [2, 0]    ]
+))
