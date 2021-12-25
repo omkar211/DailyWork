@@ -26,3 +26,5 @@ Ans: If two objects are equal according to some key that we are using for compar
 Q-Lets say we have given a ship with full of container with different height and we want to sort the containers on the ship.
 
 Ans: Inorder to archieve the solution we alway want a algorithm that will take minimum swaps and can take any numbers of comparisions.
+
+
