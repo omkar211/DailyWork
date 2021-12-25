@@ -18,3 +18,6 @@ def couting_sort(A,P,Q):
 
 
 couting_sort([1,2,3,5,4,6,7],1,7)
+
+#Time Complexity:O(N+(Q-P))
+#Space Complexity:O(N+(Q-P))
