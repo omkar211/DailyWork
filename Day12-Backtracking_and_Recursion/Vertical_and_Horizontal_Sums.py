@@ -70,26 +70,19 @@ def check(C,B):
     return True
 
 def vertical_horizontal(A,B,C,row,col):
+     if check(C,B):
+        return True
     if row>=len(B) or A<=0:
         return False
-    if check(C,B):
-        return True
-    for row in range(len(B)):
-        for col in range(len(B[0])):
-            B[row][col]*=-1
-            A=-1
-            col+=1
-            if(col>=len(B[0])):
-                col=0
-                row+=1
-            flag=vertical_horizontal(A,B,C,row,col)
-            if(flag):
-                return True
-            col-=1
-            if(col==len(B[0])):
-                row=-1
-                col=len(B[0])-1
-            B[row][col]*=-1
-            A+=1
-
+    B[row][col]*=-1
+    A-=1
+    col+=1
+    if col>=len(B[0]):
+        row+=1
+        col=0
+    consider=vertical_horizontal(A,B,C,row,col)
+    B[row][col]*=-1
+    A+=1
+    not_consider=vertical_horizontal(A,B,C,row,col)
+    return consider or not_consider
 
