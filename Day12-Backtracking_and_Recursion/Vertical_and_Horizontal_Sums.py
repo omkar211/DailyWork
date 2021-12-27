@@ -81,6 +81,10 @@ def vertical_horizontal(A,B,C,row,col):
         row+=1
         col=0
     consider=vertical_horizontal(A,B,C,row,col)
+    col-=1
+    if col<=0:
+        row-=1
+        col=len(B[0])-1
     B[row][col]*=-1
     A+=1
     not_consider=vertical_horizontal(A,B,C,row,col)
