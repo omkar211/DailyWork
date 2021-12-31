@@ -19,7 +19,6 @@ def pair(A,k):
                 tmp_end-=1
             if A[start]==A[end]:
                 /// NC2
-                continue
             else:
                 count+=(tmp_start-start-1)*(tmp_end-end-1)
             start=tmp_start
