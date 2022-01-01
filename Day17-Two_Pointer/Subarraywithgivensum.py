@@ -77,5 +77,23 @@ def sub_array2(A,B):
 
 # Optimised Approach
 """
-
+As we can see in above approach,while total>B we break and increase the i and calculate the sum again .rather than calculating sum every time can we just substract the ith element from total sum and continue with same process.
 """
+
+#Code
+def sub_array3(A,B):
+    if len(A)==B:
+        return [-1]
+    first=0
+    second=0
+    while(first<len(A) and second<len(A)):
+        total+=A[j]
+        if total==B:
+            return [i,j]
+        if total>B:
+            total-=A[i]
+            i+=1
+    return[-1]
+
+#Time Complexity:O(N)
+#Space Complexity:O(1)
