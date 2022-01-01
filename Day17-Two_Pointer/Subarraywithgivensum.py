@@ -38,25 +38,44 @@ Explanation 1:
 Explanation 2:
  No subarray sums up to required number.
 """
-#Code
-def sub_array(A,B):
-    prefix=[]
-    if len(A)<=0:
-        return "-1"
-    prefix.append(A[0])
-    for i in range(1,len(A)):
-        prefix.append(A[i]+prefix[-1])
-    start=0
-    end=len(prefix)-1
-    while start<end:
-        if A[end]==B:
-            return [start,end]
-        elif A[end]-A[start]==B:
-            return [start+1,end]
-        elif A[end]-A[start]>B:
-            end-=1
-        else:
-            start+=1
-#Time Complexity:O(N)
-#Space Complexity:O(N)
+# Bruteforce Approach
+"""
+lets take an example [x1,x2,x3,x4,x5]. So to find out the sub-array i have to move i and j and same time i have to calculate the sum .
+"""
+#Time Complexity:O(N^3)
+#Space Complexity:O(1)
+def sub_array1(A,B):
+    for i in range(len(A)):
+        for j in range(len(i,len(A))):
+            for k in range(i,j+1):
+                total+=A[k]
+            if total==B:
+                return [i,j]
+    return[-1]
 
+# Approach 2
+"""
+In previous approach ,We are calculating the sub-array sum every time after deciding the sub-array.Rather than calculating seperately we can calculate it while we deciding it .
+"""
+#Code
+def sub_array2(A,B):
+    if len(A)==0:
+        return [-1]
+
+    for i in range(-1,len(A)):
+        total=0
+        for j in range(i+1,len(A)):
+            total+=A[j]
+            if(total==B):
+                return [i+1,j]
+            if total>B:
+                break
+    return[-1]
+
+#Time Complexity:O(N^2)
+#Space Complexity:O(1)
+
+# Optimised Approach
+"""
+
+"""
