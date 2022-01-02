@@ -33,7 +33,7 @@ def sub_array(A):
         else:
             dt[temp]=True
     return False
-print(sub_array([6,-1,2,-1,1]))
+print(sub_array([6,0,2,1,1]))
 
 #Time complexity:O(N)
 #Space complexity:O(N)
