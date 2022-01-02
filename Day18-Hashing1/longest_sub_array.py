@@ -31,11 +31,17 @@ def sub_array(A):
     for i in range(len(A)):
         temp+=A[i]
         if dt.get(temp,False):
-            res=max(res,i-dt[temp])
+            if dt[temp]==-1:
+                res=max(res,i)
+            else:
+                res=max(res,i-dt[temp])
         else:
-            dt[temp]=i
+            if i==0:
+                dt[temp]=-1
+            else:
+                dt[temp]=i
     return res
-print(sub_array([6,-1,2,-1,1,8,-1,-1,-1,-1,-1,-1,6]))
+print(sub_array([6,0,2,-1]))
 
 #Time complexity:O(N)
 #Space complexity:O(N)
