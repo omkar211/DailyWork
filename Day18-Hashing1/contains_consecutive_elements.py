@@ -34,5 +34,5 @@ def contains_consecutive_elements2(A):
     return True
 
 #Time Complexity:O(N)
-#Space Complexity:O(1)
+#Space Complexity:O(N)
 
