@@ -29,5 +29,5 @@ def sub_array(A,K):
             res=max(res,i-dt[total-K]+1)
         else:
             dt[total]=i+1
-    return res
+    return res+1
 print(sub_array([6,1,-1,-1,6,2],7))
