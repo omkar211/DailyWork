@@ -1,0 +1,6 @@
+Q.What is linklist?
+ans:  1.Liner Datastructure
+      2.A linklist dynamically allocated Datastructure.
+      3.In Linklist data allocated randomly not like array(contigous block)
+      4.takes more space than array.
+
