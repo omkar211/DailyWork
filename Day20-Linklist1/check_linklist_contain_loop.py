@@ -40,6 +40,6 @@ def find_loop2(head):
         fast=fast.next.next
     return False
 
-#Time Complexity:O()
+#Time Complexity:O(N)
 #Space Complexity:O(1)
 
