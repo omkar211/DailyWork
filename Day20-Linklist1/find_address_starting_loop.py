@@ -31,4 +31,32 @@ def find_loop(head):
 5.increase both the pointer by one .here first pointer cover 'x' distance and second pointer covers 'l+x' extra travel is 'l' . so it means they meet at starting pointer of loop.
 """
 #Code
-def 
+def find_loop2(head):
+    if head==None:
+        return head
+    length=1
+    fast=slow=head
+    while(fast!=None and fast.next!=None):
+        slow=slow.next
+        fast=fast.next.next
+        if fast==None or fast.next.next==None:
+            return "loop does not exit"
+        if fast==slow:
+            break
+    slow=slow.next
+    whilefast!=slow:
+        length+=1
+        slow=slow.next
+    ptr1=head
+    ptr2=head
+    while length>0:
+        ptr2=ptr2.next
+        length-=1
+    while ptr1!=ptr2:
+        ptr1=ptr1.next
+        ptr2=ptr2.next
+    return ptr1
+
+
+#Time Complexity:O(N)
+#Space Complexity:O(1)
