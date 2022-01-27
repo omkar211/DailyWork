@@ -25,7 +25,13 @@ def find_loop(head):
 
 #Optimized Approach
 """
-
+If loop exit it mean last of linklist does not exit .
+let take an example of address of nodes .... x1,x2,x3,x4,x5,x6,x7,x8,x5
+as we can see , at x5 position address loop exit.
+So if take 2 pointer slow and fast and start traversing from same position.
+if we made increament to slow pointer by next position and faster pointer to the 2 steps then we will see it will circulating in loop once both entered in a loop then after some time both the pointer cross each other there are 2 cases.
+adjacent or 1 step away from each other if adjacent then next increment they will meet or if 1 step away then we increment 1 step then it can be next step meet .
+Because there are only 2 possiblity exits 1 or 2.
 """
 #Code
 def find_loop2(head):
