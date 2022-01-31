@@ -54,7 +54,7 @@ def count_smalller(A):
     for i in range(1,100001):
         temp[i]+=temp[i-1]
     for i in range(1,100001):
-        if(A[i]!=A[i-1]):
+        if(A[i]!=A[i-1] and A[i]!=0):
             res.append(A[i])
     return res
 #Time Complexity:O(100000) it means order of 1
