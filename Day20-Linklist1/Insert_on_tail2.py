@@ -28,6 +28,7 @@ def insert(head):
         head=helper(head,d)
         print("Please enter data ")
         d=input()
+        
     return head
 
 def print_linklist(head):
