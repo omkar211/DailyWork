@@ -1,0 +1,9 @@
+Q: What is stack?
+Ans: 
+    1. stack is abstract data-structure.(In which we are end user and we don't know how following steps are implimentation.)
+    2. Lenear datastructure.
+    3. In this datastructure we have only one ended excess.
+    4. Last In first Out.
+    5. Access will be sequencial.
+    6. push, pop,top operations.
+    
