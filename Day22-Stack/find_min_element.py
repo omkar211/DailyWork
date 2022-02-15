@@ -38,3 +38,19 @@ Take an array insert in it of given size of stack.
 #Space Complexity:O(N)
 
 # Optimized Approach2:
+"""
+4.Let's say X is a new element to be added in stack which is lesser than current minimum.
+    X<curr_min
+so, X-curr_min<0
+    so store the X-curr_min and update the current min.
+while top to find out the if curr_min is lesser than stack.Top() then return X and update curr_min to X-(X-curr_min) else return stack.Top(), but it won't work for negative numbers.
+"""
+# Enhancement in Optimized Approach2:
+"""
+
+                                
+
+
+
+
+"""
