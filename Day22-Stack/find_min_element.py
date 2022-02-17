@@ -47,10 +47,13 @@ while top to find out the if curr_min is lesser than stack.Top() then return X a
 """
 # Enhancement in Optimized Approach2:
 """
-
+Above we have derived X-curr_min<0 this condition is true only for non-negative numbers.
+Now derive for all numbers like non-negative and non-postitive.
+so add X both the side in equation:
+                                2X-curr_min<X
                                 
 
 
-
+                                
 
 """
