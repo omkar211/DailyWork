@@ -9,6 +9,7 @@ output:[1],[4],[2],[5],[3],[1,4],[1,4,2],[1,4,2,5],[1,4,2,5,3],[2,5],[2,5,3]
 2. pick the range in between u want to choose.
 3. iterate over the range and check is left most element is smallest.then add it into result.
 """
+
 #Code:
 def subarray(A):
     count=0
