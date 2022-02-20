@@ -1,7 +1,7 @@
 #Exercise:lexicographically_smallest
 """
 Problem statement:
-you are given a string.find all unique characters and must be c smallest.
+you are given a string.find all unique characters and must be smallest.
 eg:cbacdbbc 
 output:acdb
 """

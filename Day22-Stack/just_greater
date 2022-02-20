@@ -1,0 +1,50 @@
+#Just Greater
+"""
+You are given an array of integer A, return a variable just greater.
+eg: 4 5 2 25 
+    5 25 25 -1
+"""
+# Bruteforce Approach
+"""
+1. pick ith index and check till i+1 to length of given array A if first element is greater then print it else print -1.
+"""
+#Code
+def just_greater(A):
+    res=[]
+    for i in range(len(A)):
+        for j in range(i+1,len(A)):
+            if A[j]>=A[i]:
+                res.append(A[j])
+                break
+    res.append(-1)
+    return res
+
+#Time Complexity:O(N*N)
+#Space Complexity:O(1)
+
+
+#optimized Approach
+"""
+1. take an above example 4 5 2 25 
+2. pick 4 and store somewhere and check next element is it greater than 4.
+3. yes,it is then tell 4 your answer is 5 free the storage of 4 and store the 5 and same we will go for 5 next element to 2. is two is greater than 5 no then we will also store it. and go for next element is 25 is greater than 2 then tell it 25 is your answer.and free the space of 2. and check we have some pending to answer ,yes we have 5 .so we will check is 25 is greater than 25 ,yes it is then we return 25 to 5 also and free the space of 5.
+4. If we observe this pattern . we will use STACK datastructure.
+"""
+#Code
+def just_greater2(A):
+    stack=[]
+    res=[0]*len(A)
+    stack.append(0)
+    for i in range(1,len(A)):
+        if A[i]>stack[-1]:
+            res[stack[-1]]=A[i]
+            stack.pop()
+        else:
+            stack.append(A[i])
+    while(len(stack)>0):
+        res[stack.pop()]=-1
+    return res
+
+#Time Complexity:O(N)
+#Space Complexity:O(N)
+
