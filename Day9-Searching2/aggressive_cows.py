@@ -1,5 +1,5 @@
 """
-Exercise: Aggressive cows
+Exercise: Aggressive cows 
 
 Problem Description:-
 Farmer John has built a new long barn, with N stalls. Given an array of integers A of size N where each element of the array represents the location of the stall, and an integer B which represent the number of cows.
