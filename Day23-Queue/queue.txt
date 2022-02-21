@@ -1,0 +1,16 @@
+Q.What is queue?
+ans. 
+    1.Queue is a linear data structure.
+    2.Frist in first out.
+      eg. We have 2 elements e1 & e2 timr instance for e1->t1 & e2->t2 such that t1<t2.
+
+Application of Queue
+1.OS
+2.Round Robin 
+3.online compiler
+4.video streaming
+
+
+Library
+1.Rabbit mq
+2.celery
