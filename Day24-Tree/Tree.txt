@@ -1,0 +1,41 @@
+Q1. What is Tree?
+Ans: 1. Tree are the hierarchy data structure.
+     2. Parent child kind of structure.
+     3. It is collection of node and list of references of its next node or child node.
+     4.The root which do not have any parent called root node.
+     5.And those nodes do not have childrens are called leaf nodes of the tree.
+
+
+Q. What are the applications of Tree?
+Ans. 1. Git Branching.
+     2. file System.
+     3. Decision Tree.
+     4. Document Object Model (DOM) , every tag is treated as tree node in HTML.
+     5. DBMS use tree , in indexing(B-tree) .
+
+
+Q. What are the types of Tree?
+Ans. We divided based on numbers of children.
+    1. Degerated Tree (Parent can have at max one child).
+    2. Binary Tree (Parent can have at max 2 children).
+    3. Ternary Tree (Parent can have at max 3 children).
+    4. quaternary Tree (Parent can have at max 4 children).
+    5. N-ary Tree (Parent can have n number of children) or we call it generic tree.
+    6. Skewed Tree (Parent can have at max one child but in a 1 direction either left or right).
+
+Q. What are the Traversal Tree?
+Ans. The way of read the corresponding data.
+    Types of Traversal order in Binary Tree.
+    1. Preorder
+    2. Inorder
+    3. Postorder
+    4. Level order
+1. Preorder: It says, first I will read the node and after that read the left sub-tree completely and then i will read right sub-tree completely recursively.
+
+2. Inorder: It says, first I will read the left sub-tree completely and then read the node and after that then i will read right sub-tree completely recursively.
+
+3. Postorder: It says, first read the left sub-tree completely and then read right sub-tree completely and then will read the node and after that recursively.
+
+4. Level order : It says, From the root the depth of a node and depth of same level node will print.
+
+
