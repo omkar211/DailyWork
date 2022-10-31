@@ -1,0 +1,8 @@
+Q1. What is BST?
+ans. 1. At any node, We define recursive relation that all nodes inside the left subtree is less than current node and all the nodes inside the right tree is larger that current node.
+2. Extension of BT.
+3. Help in Searching queries.
+
+4. For equal elements it depends on implementation:
+5. You can store frequencies.
+6. Or You can store equal elements in left subtree or right sub tree based on requirements.
