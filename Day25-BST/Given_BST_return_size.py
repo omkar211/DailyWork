@@ -38,7 +38,7 @@ def check_BST(root,Min,Max,size):
     else:
         res = max(size,res)
         size = 1
-        return False
-    return check_BST(root.left,Min,root.val,size) and check_BST(root.right,root.val,Max,size)
+    check_BST(root.left,Min,root.val,size)
+    check_BST(root.right,root.val,Max,size)
 
 
