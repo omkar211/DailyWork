@@ -1,0 +1,2 @@
+1.Dynamic programming is something inorder to solve the big size (big computation) problem , divide 
+it into smaller problem and store the result to solve the bigger problem.
