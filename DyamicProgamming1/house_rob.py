@@ -7,7 +7,27 @@ CONNTRAINT:
 if thief rob ith house then it can not rob i-1 and i+1
 """
 
-# Approach
+# Bruteforce Approach
+"""
+1. include ith house once and include ith not take up max and store it in global variable.
+"""
+res = 0
+def rob(house,index,_sum):
+    if index == len(house):
+        return True
+    res = max(res,_sum)
+    rob(house,index+2,_sum+house[index])
+    rob(house,index+1,_sum)
+    
+rob(house,0,0):
+
+
+# Time Complexity:O(2^N)
+# Space Complexity:O(N)
+
+
+
+# Optimized Approach
 """
 let's make recurrence relation:
 1. if house = 1 ,then return 1
