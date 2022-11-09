@@ -1,2 +1,8 @@
 1.Dynamic programming is something inorder to solve the big size (big computation) problem , divide 
 it into smaller problem and store the result to solve the bigger problem.
+
+
+DP problems : key Points->
+1. Observation by dividing in to smalller problem .
+2. Base case n=0,n=1,n=3 for this pattern 
+3. Element of choice .(Recurrence relation).
