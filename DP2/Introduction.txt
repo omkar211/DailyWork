@@ -1,0 +1,5 @@
+1. Big problem ---> Solutions to small problems
+2. Observations ----> like for n==1,n==2,n==3 , find pattern and intition.
+3. Recursive Bruteforce.
+4. Memoization using map or using array
+5. Interative/ Tabulation.
