@@ -1,6 +1,6 @@
 # Exercise:
 """
-Given an apple that are hanging selling in a house.and there are 2 types of person one who can party in pair and one who can party alone.
+Given an apple that are hanging  in a house.and there are 2 types of person one who can party in pair and one who can party alone.
 How many ways can they party?
 """
 # Approach:
