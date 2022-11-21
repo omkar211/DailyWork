@@ -31,17 +31,27 @@ def find_ways(m,n):
   1. If i stand on ith and jth column of matrix the total number of ways must be total number of mat[i-1][j]+mat[i][j-1]
 4. Return mat[n-1][m-1]
 """
-#Code
-def helper(mat,start,end):
-  for i in range(start.first,end.second):
-    for j in range(start.second,end.first):
-      mat = mat[i][j-1] + mat[i-1][j]
-  return mat[end.first][end.second]
-def number_of_ways(start,end):
-  if start.first==end.first and start.second==end.second:
+#Code (Memoization Approach)
+def helper(dp,m,n):
+  if m==0 or n==0:
     return 0
-  mat = [[0 for i in range(len(matrix))]]*(len(matrix[0]))
-  return helper(mat,start,end)
+  if dp[m][n]!=-1:
+    return dp[m][n]
+  dp[m][n] = helper(dp,m-1,n) + helper(dp,m,n-1)
+  return dp[m][n]
+# Time Compexity O(N*M)
+# Space Compexity O(N*M) and stack memory
 
+# Tabulation Approach (top-down)
+# code
+def helper(dp,m,n):
+  mat = [-1 for x in range(m+1)]*n
+  mat[0] = [0]*M
+  for i in range(n):
+    mat[0][1] = 0
+  for i in range(1,n):
+    for j in range(1,m):
+      mat[i][j] = mat[i][j-1]+mat[i-1][j]
+  return mat[n][m]
 # Time Compexity O(N*M)
 # Space Compexity O(N*M)
