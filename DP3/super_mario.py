@@ -26,3 +26,17 @@ eg:
 """
 # Time Complexity :O(log(valid_health)*2(M+N))
 # Time Complexity :O(1)+stack
+
+# Bruteforce Approach
+"""
+1.Let's take any path to reach mario,[-2,-3,3,1,-5].
+2.Ask every element from back how much health you need to reach mario and return to n-1th element.to know it that much health i need and same he add it's health that needed and so on ....
+3. And calculate the path and store somewhere in a cache while reach at mario calculate the health and store it in global variable and update for min.
+"""
+# Time complexity:O(2^(M+N))
+# Space complexity:O(M+N)+stack
+
+# Optmized Approach(memoization Approch)
+"""
+
+"""
