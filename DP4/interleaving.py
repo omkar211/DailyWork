@@ -26,3 +26,8 @@ Case 3. If S1[i]==S[k] and S2[j]!=S[k]: return ans of Ans[i-1,j,k-1]
 Case 4. If S1[i]!=S[k] and S2[j]==S[k]: return ans of Ans[i,j-1,k-1]
 Case 5. If S1[i]==S[k] and S2[j]==S[k]: return ans of case 3 or case 4.
 """
+# Base case
+"""
+1. If i=j=k=0: it means empty string return True.
+2. If k=0,i!=0 or j!=0 return False 
+"""
