@@ -88,11 +88,3 @@ def interleaving(s1,s2,s3,i,j):
 3.second one when s1 and s2 both the perticular element are same and mathes to s3. then we take TRUE one answer from the just vertical and from the just horizontal shell and based on that will store the answer.
 4. And dp[n][m] will be our answer.
 """
-# code
-def interleaving(s1,s2,s3):
-    rows = len(s1)
-    cols = len(s2)
-    dp = [[False]*cols+1]*rows+1
-    for i in range(rows+1):
-        for j in range(cols+1):
-            if 
