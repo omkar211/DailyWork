@@ -62,7 +62,7 @@ def profit(arr,i,j,dp):
 """
 1.In memoization Approach shell[i][j] is storing the max profit from i to j substructure.using this information:-
 2. Take an 2d matrix of len(arr)*len(arr)
-3. If fill base for all .After that if we will see before base case values must be zero reason is we can find data index 1 to 4 , we can find 4 to 1 reason is 1st position element will come first , if we choose 1st element .
+3. If fill base for all .After that if we will see before base case values must be zero reason is we can find data index 1 to 4 , we can not  find 4 to 1 reason is 1st position element will come first , if we choose 1st element .
 4. if we see above reccurence relation we need profit[i+1][j] and profit[i][j-1].
 5. We must proceed diagonally.
 """

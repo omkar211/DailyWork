@@ -11,11 +11,10 @@ constraints: i,j>0
 Find all possible ways one by one .
 """
 # Code 
-res = 0
 def find_ways(m,n):
     if (m == 1 or n == 1)
         return 1
-    return countPaths(m - 1, n) + countPaths(m, n - 1)
+    return find_ways(m - 1, n) + find_ways(m, n - 1)
 
 
 # Time Complexity:Exponential
@@ -32,13 +31,22 @@ def find_ways(m,n):
 4. Return mat[n-1][m-1]
 """
 #Code (Memoization Approach)
-def helper(dp,m,n):
-  if m==0 or n==0:
-    return 0
-  if dp[m][n]!=-1:
-    return dp[m][n]
-  dp[m][n] = helper(dp,m-1,n) + helper(dp,m,n-1)
-  return dp[m][n]
+class Solution:
+    def helper(self,dp,row,col):
+        if row == 0 or col == 0:
+            return 1
+        if dp[row][col]:
+            return dp[row][col]
+        dp[row][col] = self.helper(dp,row-1,col)+self.helper(dp,row,col-1)
+        return dp[row][col]
+    def uniquePaths(self, m: int, n: int) -> int:
+        dp = [[0 for i in range(n)] for j in range(m)]
+        for i in range(m):
+            dp[i][0] = 1
+        for i in range(n):
+            dp[0][i] = 1
+        self.helper(dp,m-1,n-1)
+        return dp[m-1][n-1]
 # Time Compexity O(N*M)
 # Space Compexity O(N*M) and stack memory
 
